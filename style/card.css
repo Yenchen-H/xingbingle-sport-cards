@@ -1,0 +1,71 @@
+/* 星冰樂運動科學手帳風：所有圖卡共用這一份樣式 */
+:root{
+  --paper:#FBF5EA; --grid:#EDE3D1; --ink:#3B4559; --blue:#8496AD;
+  --copper:#E8973F; --mint:#7CC6B5; --peach:#F4B6B0; --sticky:#FFE9A8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px}
+body{
+  background:#EADFCB;
+  font-family:"Noto Sans TC","Noto Sans CJK TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  color:var(--ink); font-weight:500;
+}
+.paper{
+  position:absolute; inset:36px; border-radius:28px; overflow:hidden;
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1.5px,transparent 1.5px),
+    linear-gradient(90deg,var(--grid) 1.5px,transparent 1.5px);
+  background-size:36px 36px;
+  box-shadow:0 10px 0 #D9CBB2;
+  padding:54px 62px 82px;display:flex;flex-direction:column;
+}
+.tape{position:absolute;width:170px;height:44px;opacity:.85;
+  background:repeating-linear-gradient(45deg,var(--peach) 0 14px,#F8CDC8 14px 28px)}
+.tape.l{top:18px;left:-30px;transform:rotate(-14deg)}
+.tape.r{top:22px;right:-34px;transform:rotate(12deg);
+  background:repeating-linear-gradient(45deg,var(--mint) 0 14px,#A6DACE 14px 28px)}
+
+/* ① 標題列 */
+.series{font-size:22px;letter-spacing:2px;color:var(--blue);font-weight:700}
+.series b{background:var(--ink);color:#fff;border-radius:20px;padding:2px 14px;margin-left:8px;letter-spacing:1px}
+h1{font-size:62px;align-self:flex-start;font-weight:900;line-height:1.15;margin-top:10px;display:inline-block;
+  background:linear-gradient(transparent 62%,rgba(232,151,63,.38) 62%)}
+.en{font-size:25px;color:var(--blue);font-weight:700;margin-top:6px;letter-spacing:.5px}
+
+/* ② 一句話定義（便利貼） */
+.def{margin-top:22px;background:var(--sticky);padding:24px 30px 24px 30px;border-radius:6px;
+  transform:rotate(-.8deg);box-shadow:4px 6px 0 rgba(59,69,89,.12);font-size:29px;line-height:1.5;position:relative}
+.def::before{content:"一句話";position:absolute;top:-16px;left:22px;background:var(--copper);color:#fff;
+  font-size:19px;font-weight:900;padding:2px 14px;border-radius:14px;letter-spacing:2px}
+
+/* ③ 三個重點 */
+.points{margin-top:30px;display:flex;flex-direction:column;gap:18px}
+.pt{display:flex;gap:18px;align-items:flex-start;background:rgba(255,255,255,.72);border:2.5px solid var(--ink);
+  border-radius:18px;padding:16px 24px}
+.num{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  font-size:25px;font-weight:900;color:#fff;border:2.5px solid var(--ink)}
+.pt:nth-child(1) .num{background:var(--blue)}
+.pt:nth-child(2) .num{background:var(--mint)}
+.pt:nth-child(3) .num{background:var(--peach)}
+.pt h3{font-size:30px;font-weight:900;margin-bottom:3px}
+.pt p{font-size:24.5px;line-height:1.5}
+.cite{font-size:18px;color:#8A93A6;font-weight:700;white-space:nowrap}
+
+/* ④ 研究小抄＋星冰樂 */
+.bottom{margin-top:auto;padding-top:20px;display:flex;gap:16px;align-items:flex-end}
+.memo{flex:1;border:2.5px dashed var(--blue);border-radius:16px;padding:16px 20px;background:#fff;align-self:stretch}
+.memo h4{font-size:24px;font-weight:900;color:var(--copper);margin-bottom:6px;letter-spacing:1px}
+.memo li{font-size:22px;line-height:1.5;margin-left:22px;margin-bottom:4px}
+.cat{flex:none;width:310px;position:relative;text-align:center}
+.bubble{position:relative;background:#fff;border:2.5px solid var(--ink);border-radius:18px;padding:12px 16px;
+  font-size:21.5px;line-height:1.45;text-align:left;margin-bottom:12px}
+.bubble::after{content:"";position:absolute;bottom:-14px;left:170px;width:22px;height:22px;background:#fff;
+  border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
+.mascot{position:relative;width:160px;height:160px;margin:0 auto 0 96px}
+.mascot svg{width:160px;height:160px}
+.prop{position:absolute;left:-92px;bottom:4px;width:78px;height:78px;transform:rotate(-8deg)}
+
+footer{position:absolute;left:0;right:0;bottom:0;height:56px;background:var(--ink);color:#fff;
+  display:flex;justify-content:space-between;align-items:center;padding:0 34px;font-size:18px;letter-spacing:1px}
+footer span:last-child{color:#C9D3E2}

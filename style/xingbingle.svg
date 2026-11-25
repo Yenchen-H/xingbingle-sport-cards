@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <!-- 星冰樂：英國短毛貓吉祥物（灰藍毛色、銅橘色圓眼、圓臉肉頰） -->
+  <defs>
+    <radialGradient id="fur" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#A9B8CB"/>
+      <stop offset="100%" stop-color="#8496AD"/>
+    </radialGradient>
+  </defs>
+  <!-- 尾巴 -->
+  <path d="M160 178 C200 172 205 132 186 120" fill="none" stroke="#7889A0" stroke-width="16" stroke-linecap="round"/>
+  <!-- 身體 -->
+  <ellipse cx="110" cy="170" rx="58" ry="42" fill="url(#fur)" stroke="#4A5568" stroke-width="3"/>
+  <ellipse cx="110" cy="178" rx="30" ry="24" fill="#D7DFEA"/>
+  <!-- 前腳 -->
+  <ellipse cx="88" cy="205" rx="15" ry="10" fill="#A9B8CB" stroke="#4A5568" stroke-width="3"/>
+  <ellipse cx="132" cy="205" rx="15" ry="10" fill="#A9B8CB" stroke="#4A5568" stroke-width="3"/>
+  <!-- 耳朵（小、圓、間距寬） -->
+  <path d="M42 62 L48 22 L80 44 Z" fill="#8496AD" stroke="#4A5568" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M178 62 L172 22 L140 44 Z" fill="#8496AD" stroke="#4A5568" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M52 50 L54 32 L70 44 Z" fill="#F2B8B5"/>
+  <path d="M168 50 L166 32 L150 44 Z" fill="#F2B8B5"/>
+  <!-- 頭（寬圓臉） -->
+  <ellipse cx="110" cy="88" rx="74" ry="62" fill="url(#fur)" stroke="#4A5568" stroke-width="3"/>
+  <!-- 額頭條紋 -->
+  <path d="M100 34 Q102 44 100 52 M110 32 L110 52 M120 34 Q118 44 120 52" stroke="#7385A0" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- 肉頰 -->
+  <ellipse cx="110" cy="112" rx="34" ry="22" fill="#D7DFEA"/>
+  <!-- 眼睛（銅橘色大圓眼） -->
+  <circle cx="78" cy="86" r="17" fill="#E8973F" stroke="#4A5568" stroke-width="3"/>
+  <circle cx="142" cy="86" r="17" fill="#E8973F" stroke="#4A5568" stroke-width="3"/>
+  <ellipse cx="78" cy="88" rx="7" ry="11" fill="#2D3748"/>
+  <ellipse cx="142" cy="88" rx="7" ry="11" fill="#2D3748"/>
+  <circle cx="83" cy="80" r="4.5" fill="#fff"/>
+  <circle cx="147" cy="80" r="4.5" fill="#fff"/>
+  <!-- 腮紅 -->
+  <ellipse cx="56" cy="110" rx="10" ry="6" fill="#F2A7A7" opacity=".75"/>
+  <ellipse cx="164" cy="110" rx="10" ry="6" fill="#F2A7A7" opacity=".75"/>
+  <!-- 鼻子與嘴 -->
+  <path d="M104 104 L116 104 L110 111 Z" fill="#E88F98"/>
+  <path d="M110 111 Q110 119 101 119 M110 111 Q110 119 119 119" stroke="#4A5568" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- 鬍鬚 -->
+  <path d="M74 112 L44 106 M74 118 L46 122 M146 112 L176 106 M146 118 L174 122" stroke="#4A5568" stroke-width="2" stroke-linecap="round"/>
+  <!-- 招牌配件：薄荷綠運動頭帶 -->
+  <path d="M40 66 Q110 40 180 66" stroke="#7CC6B5" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <path d="M40 66 Q110 40 180 66" stroke="#fff" stroke-width="2" stroke-dasharray="6 8" fill="none"/>
+</svg>
