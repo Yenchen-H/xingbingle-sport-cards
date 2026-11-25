@@ -2,7 +2,6 @@
 id: "03"
 title: SHAP 可解釋 AI
 en: SHapley Additive exPlanations
-prop: 拼圖
 sources: Majumdar 2024、Cohan 2021、Rahimian 2025
 ---
 

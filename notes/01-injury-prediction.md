@@ -2,7 +2,6 @@
 id: "01"
 title: 傷害預測
 en: Injury Prediction
-prop: 放大鏡
 sources: Cohan 2021、Majumdar 2024、Zhou 2025
 ---
 

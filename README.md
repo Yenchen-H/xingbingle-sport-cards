@@ -1,9 +1,9 @@
-# 星冰樂的運動科學手帳 🐱🏸
+# 星冰樂的運動科學手帳
 
 一個專門產生**統一風格運動科學教學圖卡**的 AI Agent 專案。
 生成式人工智慧 W12 作業：統一風格圖像產生的 Agent。
 
-吉祥物是我家的英國短毛貓「星冰樂」，戴著薄荷綠運動頭帶，帶大家讀運動科學論文。
+吉祥物是我家的英國短毛貓「星冰樂」，依照片畫成正常比例的扁平插畫，脖子上掛著牠的紅色御守，陪大家讀運動科學論文。
 內容來自我在 W10 建立的 LLM Wiki [AI 在運動科學的應用](https://github.com/Yenchen-H/ai-sport-wiki)。
 
 👉 **線上瀏覽：** https://yenchen-h.github.io/xingbingle-sport-cards/
@@ -37,7 +37,7 @@ LLM Wiki ──▶ notes/ ──[skill: notes-to-html]──▶ html/ ──[ski
 | 固定什麼 | 放在哪裡 |
 |---|---|
 | 色票、字體、版面規格、文字規則 | `style/style-guide.md` |
-| 吉祥物造型 | `style/xingbingle.svg`、`style/character-sheet.png` |
+| 吉祥物造型（依真實照片繪製） | `style/xingbingle.svg`、`style/character-sheet.png` |
 | 版型與樣式 | `style/card.css`（改一次，全部卡片一起變） |
 | 內容格式 | `notes/` 的固定標題 |
 | AI 生圖指令 | `prompts/` 同一個模板，只換動作與小插圖 |
@@ -46,7 +46,7 @@ LLM Wiki ──▶ notes/ ──[skill: notes-to-html]──▶ html/ ──[ski
 
 ```
 .claude/skills/   notes-to-html、html-to-card 兩個 skill
-style/            風格指南、card.css、星冰樂、道具圖示
+style/            風格指南、card.css、星冰樂
 notes/            內容筆記
 html/             一頁式 HTML 圖卡
 png/              程式截圖版 PNG（png/ai/ 放 AI 繪製版）

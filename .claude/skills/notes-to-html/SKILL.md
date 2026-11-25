@@ -21,7 +21,6 @@ description: 把一份運動科學主題的內容筆記（notes/*.md）整理成
 id: "05"
 title: 中文標題（8 字內）
 en: English Title
-prop: 放大鏡 | 碼錶 | 拼圖 | 筆記板   ← 必須是 style/props/ 裡已有的檔名
 sources: 作者 年份、作者 年份
 ---
 
@@ -61,7 +60,7 @@ python scripts/build_html.py notes/NN-xxx.md
 
 用瀏覽器開 HTML（1080×1350），確認：
 - [ ] 三個重點都有出現、沒有文字溢出框外
-- [ ] 星冰樂和道具沒有被頁尾蓋住
+- [ ] 星冰樂沒有被頁尾蓋住，上方小提醒沒有超過 4 行
 - [ ] 頁尾來源和筆記的 sources 一致
 
 檢查通過後交給 `html-to-card` skill。

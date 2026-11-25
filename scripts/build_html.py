@@ -46,7 +46,6 @@ def build(note: dict) -> str:
     memo = [l[2:] for l in sec["研究小抄"].splitlines() if l.startswith("- ")]
 
     cat_svg = (ROOT / "style/xingbingle.svg").read_text(encoding="utf-8")
-    prop_svg = (ROOT / f"style/props/{note['prop']}.svg").read_text(encoding="utf-8")
 
     pts_html = "\n".join(
         f'<div class="pt"><div class="num">{i}</div><div><h3>{html.escape(h)}</h3><p>{inline(p)}</p></div></div>'
@@ -65,8 +64,7 @@ def build(note: dict) -> str:
 </head>
 <body>
 <div class="paper">
-  <div class="tape l"></div><div class="tape r"></div>
-  <div class="series">{SERIES}<b>No.{note['id']}</b></div>
+    <div class="series">{SERIES}<b>No.{note['id']}</b></div>
   <h1>{html.escape(note['title'])}</h1>
   <div class="en">{html.escape(note['en'])}</div>
 
@@ -77,12 +75,12 @@ def build(note: dict) -> str:
   </div>
 
   <div class="bottom">
-    <div class="memo"><h4>📒 研究小抄</h4><ul>
+    <div class="memo"><h4>研究小抄</h4><ul>
 {memo_html}
     </ul></div>
     <div class="cat">
       <div class="bubble">{inline(sec['星冰樂小提醒'])}</div>
-      <div class="mascot">{cat_svg}<div class="prop">{prop_svg}</div></div>
+      <div class="mascot">{cat_svg}</div>
     </div>
   </div>
 

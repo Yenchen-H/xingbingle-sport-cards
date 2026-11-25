@@ -2,7 +2,6 @@
 id: "02"
 title: 訓練負荷 ACWR
 en: Acute:Chronic Workload Ratio
-prop: 碼錶
 sources: Majumdar 2024
 ---
 

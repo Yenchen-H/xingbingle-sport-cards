@@ -2,7 +2,6 @@
 id: "04"
 title: AI 輔助選才
 en: Talent Identification
-prop: 筆記板
 sources: Zhou 2025、Rongen 2026
 ---
 
