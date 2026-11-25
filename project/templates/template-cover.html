@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>封面模板</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ===== 星冰樂的運動科學手帳：固定模板，以下樣式不可修改 ===== */
+:root{--bg:#FFFDF4;--panel:#F2F1E9;--ink:#292D3E;--sub:#646A7E;--primary:#F6E58D;--blue:#2447D8;--line:#E6E3D3;--body:#3A3F52}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#E7E5DC}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;font-weight:500}
+
+.txt{position:absolute;left:140px;top:170px;width:1080px}
+.series{color:var(--blue);font-size:26px;font-weight:700;letter-spacing:4px}
+.bar{width:90px;height:6px;background:var(--blue);margin:34px 0 36px}
+h1{font-size:116px;font-weight:900;line-height:1.15}
+.en{color:var(--sub);font-size:32px;margin-top:18px}
+.sub{font-size:34px;font-weight:700;margin-top:44px}
+.meta{position:absolute;left:140px;bottom:120px;font-size:26px;color:var(--sub);letter-spacing:1px}
+.circle{position:absolute;right:170px;bottom:60px;width:520px;height:520px;border-radius:50%;background:var(--primary)}
+.cat{position:absolute;right:285px;bottom:120px}
+.cat svg{width:335px;height:460px;display:block}
+
+</style>
+</head>
+<body>
+<div id="stage">
+<div class="txt">
+  <div class="series">星冰樂的運動科學手帳</div>
+  <div class="bar"></div>
+  <h1>{{大標第一行}}<br>{{大標第二行}}</h1>
+  <div class="en">{{英文副標}}</div>
+  <div class="sub">{{副標}}</div>
+</div>
+<div class="meta">{{講者或日期資訊}}</div>
+<div class="circle"></div>
+<div class="cat"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 330" width="240" height="330">
+  <!-- 星冰樂：銀灰色英國短毛貓，白色胸口與腳掌、淡虎斑、黃綠色眼睛、奶茶色項圈＋紅色御守。正常比例扁平插畫。 -->
+  <defs>
+    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C3C6CD"/><stop offset="1" stop-color="#ADB1BA"/>
+    </linearGradient>
+  </defs>
+  <!-- 尾巴（繞到前腳旁） -->
+  <path d="M60 300 C20 302 14 262 40 246" fill="none" stroke="#A3A8B2" stroke-width="18" stroke-linecap="round"/>
+  <!-- 身體 -->
+  <path d="M84 132 C58 160 44 214 46 262 C48 296 70 312 120 312 C170 312 192 296 194 262 C196 214 182 160 156 132 Z" fill="url(#fur)"/>
+  <!-- 側身虎斑 -->
+  <path d="M60 206 q14 4 22 -4 M56 232 q16 4 26 -4 M184 206 q-14 4 -22 -4 M188 232 q-16 4 -26 -4" stroke="#959AA5" stroke-width="5" fill="none" stroke-linecap="round" opacity=".6"/>
+  <!-- 白色胸口 -->
+  <path d="M96 140 C88 176 92 222 104 250 L136 250 C148 222 152 176 144 140 Z" fill="#F3F1EE"/>
+  <!-- 前腳 -->
+  <path d="M96 210 C92 250 92 286 94 306 L118 306 C118 284 116 246 114 214 Z" fill="#C9CCD2"/>
+  <path d="M144 210 C148 250 148 286 146 306 L122 306 C122 284 124 246 126 214 Z" fill="#C9CCD2"/>
+  <path d="M97 238 h16 M96 256 h18 M143 238 h-16 M144 256 h-18" stroke="#A3A8B2" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- 白腳掌 -->
+  <ellipse cx="106" cy="308" rx="15" ry="8" fill="#F6F4F1"/>
+  <ellipse cx="134" cy="308" rx="15" ry="8" fill="#F6F4F1"/>
+  <path d="M101 306 v5 M107 306 v6 M129 306 v6 M135 306 v5" stroke="#C9C6C1" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- 耳朵 -->
+  <path d="M70 70 L74 18 L112 50 Z" fill="#B3B7BF"/>
+  <path d="M170 70 L166 18 L128 50 Z" fill="#B3B7BF"/>
+  <path d="M80 58 L82 30 L104 50 Z" fill="#E9C6C2"/>
+  <path d="M160 58 L158 30 L136 50 Z" fill="#E9C6C2"/>
+  <!-- 頭 -->
+  <path d="M120 40 C162 40 178 66 178 94 C178 126 154 146 120 146 C86 146 62 126 62 94 C62 66 78 40 120 40 Z" fill="url(#fur)"/>
+  <!-- 額頭 M 字紋 -->
+  <path d="M104 50 q4 12 2 22 M120 46 v24 M136 50 q-4 12 -2 22" stroke="#969BA6" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- 白色口鼻區 -->
+  <path d="M120 98 C110 98 100 106 98 116 C96 128 106 140 120 140 C134 140 144 128 142 116 C140 106 130 98 120 98 Z" fill="#F3F1EE"/>
+  <path d="M114 76 C116 86 116 96 120 104 C124 96 124 86 126 76 Z" fill="#DADCE0" opacity=".8"/>
+  <!-- 眼睛 -->
+  <ellipse cx="96" cy="92" rx="12" ry="12.5" fill="#AEB46C"/>
+  <ellipse cx="144" cy="92" rx="12" ry="12.5" fill="#AEB46C"/>
+  <ellipse cx="96" cy="93" rx="5.5" ry="7.5" fill="#2B2E35"/>
+  <ellipse cx="144" cy="93" rx="5.5" ry="7.5" fill="#2B2E35"/>
+  <circle cx="99.5" cy="88" r="2.4" fill="#fff"/>
+  <circle cx="147.5" cy="88" r="2.4" fill="#fff"/>
+  <!-- 鼻子與嘴 -->
+  <path d="M113 112 L127 112 L120 120 Z" fill="#D99A98"/>
+  <path d="M120 120 v5 M120 125 q-6 5 -11 2 M120 125 q6 5 11 2" stroke="#8C8F97" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- 鬍鬚 -->
+  <path d="M98 120 L62 114 M98 126 L64 130 M142 120 L178 114 M142 126 L176 130" stroke="#D4D6DB" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- 項圈與紅色御守 -->
+  <path d="M86 144 Q120 160 154 144" stroke="#D2AC86" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <circle cx="120" cy="156" r="4.5" fill="none" stroke="#C9A24C" stroke-width="2.5"/>
+  <rect x="106" y="161" width="28" height="36" rx="5" fill="#F2463D"/>
+  <path d="M110 161 l10 -5 l10 5" fill="#F2463D"/>
+  <rect x="110" y="168" width="20" height="22" rx="2" fill="none" stroke="#F0C46A" stroke-width="1.4"/>
+  <path d="M120 172 v14 M115 176 h10 M115 182 h10" stroke="#F0C46A" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
+</div>
+</div>
+<script>
+/* 自動縮放：讓整張作品完整顯示在預覽視窗中（不可刪除） */
+function fit(){const W=1920,H=1080,s=Math.min(innerWidth/W,innerHeight/H);
+document.getElementById('stage').style.transform=`translate(${(innerWidth-W*s)/2}px,${(innerHeight-H*s)/2}px) scale(${s})`;}
+addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>

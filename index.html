@@ -3,40 +3,87 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>星冰樂的運動科學手帳</title>
+<title>星冰樂的運動科學手帳｜統一風格圖像 Agent</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet">
 <style>
-  body{margin:0;background:#FFFDF4;color:#292D3E;font-family:"Noto Sans TC",sans-serif}
-  header{max-width:1100px;margin:0 auto;padding:64px 24px 8px;display:flex;align-items:flex-end;gap:24px}
-  header img{width:90px}
-  .tag{color:#2447D8;font-weight:700;letter-spacing:4px;font-size:14px}
-  h1{font-size:42px;font-weight:900;margin:8px 0 0}
-  header p{margin:8px 0 0;color:#646A7E}
-  .flow{max-width:1100px;margin:28px auto 0;padding:18px 24px 0;border-top:2px solid #292D3E;display:flex;gap:14px;align-items:center;font-weight:700;color:#4A4F5A}
-  .flow i{font-style:normal;color:#2447D8}
-  .grid{max-width:1100px;margin:28px auto 60px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
-  .grid a{display:block;color:inherit;text-decoration:none}
-  .grid img{width:100%;display:block;box-shadow:0 6px 24px rgba(36,39,46,.10);transition:transform .2s}
-  .grid a:hover img{transform:translateY(-4px)}
-  .grid div{padding:12px 2px;font-weight:700}
-  .grid div span{color:#2447D8;margin-right:8px}
-  footer{max-width:1100px;margin:0 auto;padding:16px 24px 40px;border-top:1px solid #F6E58D;color:#646A7E;font-size:14px}
-  footer a{color:#292D3E}
+  :root{--bg:#FFFDF4;--panel:#F2F1E9;--ink:#292D3E;--sub:#646A7E;--yellow:#F6E58D;--blue:#2447D8;--line:#E6E3D3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC",sans-serif;line-height:1.7}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+  header{padding:72px 0 28px;display:flex;align-items:flex-end;gap:28px;border-bottom:2px solid var(--ink)}
+  header img{width:96px;flex:none}
+  .tag{color:var(--blue);font-weight:700;letter-spacing:4px;font-size:14px}
+  h1{font-size:44px;font-weight:900;margin:6px 0 0;line-height:1.2}
+  header p{margin:8px 0 0;color:var(--sub)}
+  h2{font-size:26px;font-weight:900;margin:56px 0 18px}
+  h2 span{color:var(--blue);margin-right:10px}
+  .works{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+  figure{margin:0}
+  figure img{width:100%;display:block;box-shadow:0 6px 24px rgba(41,45,62,.10)}
+  figcaption{font-weight:700;margin-top:10px}
+  figcaption small{color:var(--sub);font-weight:500;margin-left:8px}
+  .wide{grid-column:1 / -1}
+  .rules{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .rule{background:var(--panel);border-radius:6px;padding:18px 20px;border-top:4px solid var(--blue)}
+  .rule b{display:block;font-size:18px;margin-bottom:6px}
+  .rule p{margin:0;font-size:15px;color:#3A3F52}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:4px;border:1px solid #0002}
+  .fix{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:start}
+  .fix img{width:100%;border:1px solid var(--line)}
+  .fix ol{margin:0;padding-left:22px}
+  .fix li{margin-bottom:8px}
+  .v{display:inline-block;font-weight:900;color:var(--blue);margin-right:6px}
+  .note{background:var(--yellow);border-radius:6px;padding:16px 22px;margin-top:18px;font-weight:700}
+  footer{margin:64px 0 0;padding:18px 0 44px;border-top:1px solid var(--line);color:var(--sub);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  footer a{color:var(--ink)}
+  @media(max-width:760px){.works,.fix{grid-template-columns:1fr}.rules{grid-template-columns:1fr 1fr}h1{font-size:32px}}
 </style>
 </head>
 <body>
+<div class="wrap">
 <header>
-  <img src="style/xingbingle.svg" alt="星冰樂">
-  <div><div class="tag">W12 統一風格圖像 AGENT</div><h1>星冰樂的運動科學手帳</h1>
-  <p>統一風格教學圖卡 Agent｜生成式人工智慧 W12 作業</p></div>
+  <img src="exploration/style/xingbingle.svg" alt="星冰樂">
+  <div>
+    <div class="tag">W12 統一風格圖像 AGENT</div>
+    <h1>星冰樂的運動科學手帳</h1>
+    <p>用 Claude 專案建立的風格 Agent：給它「用途＋內容」，就產出同一系列的圖卡、海報和封面。</p>
+  </div>
 </header>
-<div class="flow"><span>notes</span><i>→ skill →</i><span>html</span><i>→ skill →</i><span>png</span></div>
-<div class="grid">
-  <a href="png/01-injury-prediction.png"><img src="png/01-injury-prediction.png" alt="傷害預測"><div><span>01</span>傷害預測</div></a>
-  <a href="png/02-training-load.png"><img src="png/02-training-load.png" alt="訓練負荷 ACWR"><div><span>02</span>訓練負荷 ACWR</div></a>
-  <a href="png/03-shap.png"><img src="png/03-shap.png" alt="SHAP 可解釋 AI"><div><span>03</span>SHAP 可解釋 AI</div></a>
-  <a href="png/04-talent-identification.png"><img src="png/04-talent-identification.png" alt="AI 輔助選才"><div><span>04</span>AI 輔助選才</div></a>
+
+<h2><span>01</span>專案生成的作品</h2>
+<div class="works">
+  <figure><img src="works/01-學習圖卡-傷害預測.png" alt="學習圖卡"><figcaption>學習圖卡<small>1080×1350　4:5</small></figcaption></figure>
+  <figure><img src="works/02-海報-LLM-Wiki.png" alt="海報"><figcaption>海報<small>1240×1754　A4 直式</small></figcaption></figure>
+  <figure class="wide"><img src="works/03-封面-W10簡報.png" alt="封面"><figcaption>簡報封面<small>1920×1080　16:9</small></figcaption></figure>
 </div>
-<footer>內容來源：<a href="https://github.com/Yenchen-H/ai-sport-wiki">AI 在運動科學的應用 LLM Wiki</a>｜<a href="https://github.com/Yenchen-H/xingbingle-sport-cards">GitHub</a></footer>
+
+<h2><span>02</span>寫進專案指示的風格規則</h2>
+<div class="rules">
+  <div class="rule"><b>色調</b><p><span class="sw" style="background:#FFFDF4"></span>米白底　<span class="sw" style="background:#292D3E"></span>深灰藍字<br><span class="sw" style="background:#F6E58D"></span>淡黃區塊　<span class="sw" style="background:#2447D8"></span>寶藍點綴</p></div>
+  <div class="rule"><b>筆觸</b><p>扁平設計，不用陰影、漸層、emoji、紙膠帶；圓角 6px，只用直線。</p></div>
+  <div class="rule"><b>角色</b><p>星冰樂：銀灰毛、白胸口、黃綠眼、紅色御守，正常比例，不畫 Q 版。</p></div>
+  <div class="rule"><b>構圖</b><p>全部靠左對齊；系列名 → 大標 → 副標 → 內容 → 星冰樂 → 頁尾；留白 30% 以上。</p></div>
+</div>
+
+<h2><span>03</span>風格跑掉時怎麼修正</h2>
+<div class="fix">
+  <img src="works/v1-風格跑掉.png" alt="v1 風格跑掉">
+  <div>
+    <p><span class="v">v1</span>只用文字描述風格，結果走樣了：</p>
+    <ol>
+      <li>系列名被改成「小貓的運動科學手帳」</li>
+      <li>編號變大，來源格式和其他作品不同</li>
+      <li>圖卡比預覽視窗大，星冰樂和研究小抄被切掉</li>
+    </ol>
+    <p><span class="v">v2</span>改成模板制：知識庫放三份 HTML 模板，規定只能替換 <code>{{ }}</code> 內的文字，系列名一個字都不能改，並加上自動縮放。重新生成後三件作品就一致了。</p>
+  </div>
+</div>
+<div class="note">體會：只說「保持同樣風格」不夠，要把風格寫成具體規則，最好直接給模板，AI 才不會自由發揮。</div>
+
+<footer>
+  <span>內容來源：<a href="https://github.com/Yenchen-H/ai-sport-wiki">AI 在運動科學的應用 LLM Wiki</a></span>
+  <span><a href="https://github.com/Yenchen-H/xingbingle-sport-cards">GitHub</a>｜成大工科所 黃姸蓁</span>
+</footer>
+</div>
 </body>
 </html>

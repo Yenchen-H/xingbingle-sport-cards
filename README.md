@@ -1,77 +1,75 @@
 # 星冰樂的運動科學手帳
 
-一個專門產生**統一風格運動科學教學圖卡**的 AI Agent 專案。
-生成式人工智慧 W12 作業：統一風格圖像產生的 Agent。
+生成式人工智慧 W12 作業：**統一風格圖像產生的 Agent**
 
-吉祥物是我家的英國短毛貓「星冰樂」，依照片畫成正常比例的扁平插畫，脖子上掛著牠的紅色御守，陪大家讀運動科學論文。
-內容來自我在 W10 建立的 LLM Wiki [AI 在運動科學的應用](https://github.com/Yenchen-H/ai-sport-wiki)。
+用 **Claude 專案（Projects）** 建立一個專門產生統一風格圖像的 Agent。把色調、筆觸、角色、構圖寫進專案指示，並在知識庫放入三份 HTML 模板，之後只要告訴它「用途＋內容」，就能做出同一系列的學習圖卡、海報和封面。
 
-👉 **線上瀏覽：** https://yenchen-h.github.io/xingbingle-sport-cards/
+吉祥物是我家的英國短毛貓「星冰樂」，依照片畫成正常比例的扁平插畫，脖子上掛著牠的紅色御守。內容取自我 W10 做的 LLM Wiki [AI 在運動科學的應用](https://github.com/Yenchen-H/ai-sport-wiki)。
 
-| No. | 主題 | PNG |
-|---|---|---|
-| 01 | 傷害預測 Injury Prediction | [png](png/01-injury-prediction.png) |
-| 02 | 訓練負荷 ACWR | [png](png/02-training-load.png) |
-| 03 | SHAP 可解釋 AI | [png](png/03-shap.png) |
-| 04 | AI 輔助選才 Talent Identification | [png](png/04-talent-identification.png) |
+👉 **展示頁：** https://yenchen-h.github.io/xingbingle-sport-cards/
 
-## 製作流程
+## 作品（同一個專案生成，三種用途、三種尺寸）
 
-```
-LLM Wiki ──▶ notes/ ──[skill: notes-to-html]──▶ html/ ──[skill: html-to-card]──▶ png/
-（W10）     內容筆記                          一頁式網頁                    教學圖卡
-                                            只有內容、沒有插圖             A 程式截圖
-                                                                         B AI 重新繪製
-```
-
-1. **notes**：從 Wiki 挑一個概念，照固定格式寫成筆記（一句話定義、三個重點、研究小抄、星冰樂小提醒），每個數字都附來源。
-2. **notes → html**：`scripts/build_html.py` 把筆記套進同一個版型，樣式全部來自 `style/card.css`。
-3. **html → png**：
-   - **路線 A**：`scripts/render_png.py` 用無頭瀏覽器截圖，文字百分之百正確。
-   - **路線 B**：把截圖和星冰樂角色設定圖一起交給 ChatGPT／Gemini，用 `prompts/` 裡的固定模板重新繪製成手繪插畫版。
-
-兩個步驟都寫成 skill（`.claude/skills/`），之後只要對 Claude 說「幫我把『比賽結果預測』做成一張新圖卡」，它就會照同樣的規則做出同風格的卡片。
-
-## 用這個模板做一張新卡
-
-這個專案就是一個固定模板：換主題只要換內容，風格不用重新設計。
-
-1. 複製 `notes/_template.md`，改名成 `notes/05-xxx.md`，填入內容
-2. 執行 `python scripts/make_card.py notes/05-xxx.md`
-3. 在 `png/05-xxx.png` 就會得到一張同風格的圖卡
-
-或是直接對 Claude 說：「幫我把 Wiki 裡的『比賽結果預測』做成第 5 張圖卡」，它會讀 `CLAUDE.md` 和兩個 skill，照同樣規則完成。
-
-## 怎麼維持「統一風格」？
-
-| 固定什麼 | 放在哪裡 |
+| 學習圖卡 1080×1350 | 海報 1240×1754（A4） |
 |---|---|
-| 色票、字體、版面規格、文字規則 | `style/style-guide.md` |
-| 吉祥物造型（依真實照片繪製） | `style/xingbingle.svg`、`style/character-sheet.png` |
-| 版型與樣式 | `style/card.css`（改一次，全部卡片一起變） |
-| 內容格式 | `notes/` 的固定標題 |
-| AI 生圖指令 | `prompts/` 同一個模板，只換動作與小插圖 |
+| ![學習圖卡](works/01-學習圖卡-傷害預測.png) | ![海報](works/02-海報-LLM-Wiki.png) |
+
+**簡報封面 1920×1080（16:9）**
+
+![封面](works/03-封面-W10簡報.png)
+
+## 專案怎麼設定
+
+| 項目 | 內容 |
+|---|---|
+| 工具 | Claude 專案 |
+| 專案指示 | [project/專案指示_v2.md](project/專案指示_v2.md)（現行版本） |
+| 知識庫 | [template-card.html](project/templates/template-card.html)、[template-poster.html](project/templates/template-poster.html)、[template-cover.html](project/templates/template-cover.html) |
+| 下指令 | 每件作品開新對話，貼上「用途＋內容」，見 [project/生成指令.md](project/生成指令.md) |
+
+### 風格規則重點
+
+- **色調**：米白底 `#FFFDF4`、深灰藍文字 `#292D3E`、淡黃資訊區塊 `#F6E58D`、寶藍 `#2447D8` 只用在編號與細線
+- **筆觸**：扁平設計，不用陰影、漸層、emoji、紙膠帶；區塊圓角 6px；只用直線
+- **角色**：星冰樂，銀灰毛、白胸口、黃綠眼、紅色御守，正常比例、不畫 Q 版，每件作品出現一次
+- **構圖**：全部靠左對齊，由上到下固定為系列名 → 大標 → 英文副標 → 內容 → 星冰樂 → 頁尾，留白至少 30%
+
+## 風格跑掉時怎麼修正：v1 → v2
+
+**v1：只用文字描述風格**（[專案指示_v1.md](project/專案指示_v1.md)）
+
+生成的學習圖卡走樣了：系列名被改成「小貓的運動科學手帳」、編號變大，而且圖卡比預覽視窗大，下半部的星冰樂和研究小抄被切掉。
+
+<img src="works/v1-風格跑掉.png" width="480" alt="v1 風格跑掉">
+
+原因是 Claude 每次都依照文字描述重新寫 HTML，細節就會自由發揮。
+
+**v2：改成模板制**（[專案指示_v2.md](project/專案指示_v2.md)）
+
+- 在知識庫上傳三份 HTML 模板，指示規定「只能替換 `{{ }}` 內的文字，不可修改樣式、版面和星冰樂」
+- 寫明「系列名一個字都不能改」
+- 模板內建自動縮放，整張作品能在預覽視窗完整顯示
+- 要求 Claude 每次輸出後回報自我檢查結果
+
+改成 v2 後重新生成，三件作品就一致了。
+
+## 前期風格探索
+
+建立專案之前，我先和 Claude 一起決定風格，過程放在 [exploration/](exploration/)：
+
+1. 第一版是手帳拼貼風，星冰樂畫成 Q 版灰藍貓，但太花，也不像我家的貓
+2. 改成乾淨留白的版面，並依照片重畫星冰樂
+3. 配色前後試了三組，最後選定米白配寶藍
+4. 用這個風格做了 4 張學習圖卡（傷害預測、ACWR、SHAP、AI 選才），之後整理成專案指示與模板
 
 ## 資料夾
 
 ```
-.claude/skills/   notes-to-html、html-to-card 兩個 skill
-style/            風格指南、card.css、星冰樂
-notes/            內容筆記（_template.md 是空白範本）
-html/             一頁式 HTML 圖卡
-png/              程式截圖版 PNG（png/ai/ 放 AI 繪製版）
-prompts/          ChatGPT／Gemini 生圖 prompt
-scripts/          make_card.py（一行做完）、build_html.py、render_png.py
-docs/             作業說明
-```
-
-## 自己跑一次
-
-```bash
-pip install playwright && playwright install chromium
-python scripts/build_html.py
-python scripts/render_png.py
+project/       專案指示 v1、v2，三份 HTML 模板，生成指令
+works/         專案生成的三件作品，以及 v1 走樣的截圖
+exploration/   前期風格探索（星冰樂 SVG、4 張學習圖卡、產圖腳本）
+index.html     GitHub Pages 展示頁
 ```
 
 ---
-本專案在 Claude 協助下完成：我決定主題、吉祥物與風格，Claude 協助撰寫 skill、版型與腳本，內容由我從 W10 Wiki 挑選並核對。
+本專案在 Claude 協助下完成：主題、吉祥物、風格方向與配色由我決定，Claude 協助撰寫專案指示、模板與展示頁。
