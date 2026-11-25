@@ -32,6 +32,16 @@ LLM Wiki ──▶ notes/ ──[skill: notes-to-html]──▶ html/ ──[ski
 
 兩個步驟都寫成 skill（`.claude/skills/`），之後只要對 Claude 說「幫我把『比賽結果預測』做成一張新圖卡」，它就會照同樣的規則做出同風格的卡片。
 
+## 用這個模板做一張新卡
+
+這個專案就是一個固定模板：換主題只要換內容，風格不用重新設計。
+
+1. 複製 `notes/_template.md`，改名成 `notes/05-xxx.md`，填入內容
+2. 執行 `python scripts/make_card.py notes/05-xxx.md`
+3. 在 `png/05-xxx.png` 就會得到一張同風格的圖卡
+
+或是直接對 Claude 說：「幫我把 Wiki 裡的『比賽結果預測』做成第 5 張圖卡」，它會讀 `CLAUDE.md` 和兩個 skill，照同樣規則完成。
+
 ## 怎麼維持「統一風格」？
 
 | 固定什麼 | 放在哪裡 |
@@ -47,11 +57,11 @@ LLM Wiki ──▶ notes/ ──[skill: notes-to-html]──▶ html/ ──[ski
 ```
 .claude/skills/   notes-to-html、html-to-card 兩個 skill
 style/            風格指南、card.css、星冰樂
-notes/            內容筆記
+notes/            內容筆記（_template.md 是空白範本）
 html/             一頁式 HTML 圖卡
 png/              程式截圖版 PNG（png/ai/ 放 AI 繪製版）
 prompts/          ChatGPT／Gemini 生圖 prompt
-scripts/          build_html.py、render_png.py
+scripts/          make_card.py（一行做完）、build_html.py、render_png.py
 docs/             作業說明
 ```
 

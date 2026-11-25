@@ -92,7 +92,7 @@ def build(note: dict) -> str:
 
 
 def main():
-    files = [Path(a) for a in sys.argv[1:]] or sorted((ROOT / "notes").glob("*.md"))
+    files = [Path(a) for a in sys.argv[1:]] or sorted(f for f in (ROOT / "notes").glob("*.md") if not f.name.startswith("_"))
     for f in files:
         f = f if f.is_absolute() else ROOT / f
         out = ROOT / "html" / (f.stem + ".html")

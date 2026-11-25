@@ -14,6 +14,8 @@ description: 把一份運動科學主題的內容筆記（notes/*.md）整理成
 
 ### 1. 寫筆記 `notes/NN-英文短名.md`
 
+複製 `notes/_template.md` 再填內容。
+
 固定格式（標題、順序都不能改，腳本靠它們解析）：
 
 ```markdown

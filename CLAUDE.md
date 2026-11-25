@@ -20,8 +20,8 @@
 ## 新增一張卡的完整流程
 
 1. 和我確認要做哪個概念
-2. 寫 `notes/NN-xxx.md` → 給我看內容
-3. `python scripts/build_html.py notes/NN-xxx.md`
-4. `python scripts/render_png.py html/NN-xxx.html`，自己打開 PNG 檢查有沒有溢字
+2. 複製 `notes/_template.md` 寫成 `notes/NN-xxx.md` → 給我看內容
+3. `python scripts/make_card.py notes/NN-xxx.md`（一次產生 HTML 與 PNG）
+4. 自己打開 PNG 檢查有沒有溢字
 5. 產生 `prompts/NN-xxx.md`
 6. 在 `index.html` 和 `README.md` 的表格加上新卡片
