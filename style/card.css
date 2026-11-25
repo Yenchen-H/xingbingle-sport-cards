@@ -1,14 +1,14 @@
 /* 星冰樂的運動科學手帳：乾淨版面。所有圖卡共用這一份樣式。 */
 :root{
   /* 配色（使用者指定） */
-  --bg:#FFF0CF;      /* background：奶油黃底 */
-  --panel:#8FD3F4;   /* surface：一句話定義底塊 */
-  --ink:#202B49;     /* text：深藍文字 */
-  --primary:#FFB94A; /* primary：研究小抄區塊 */
-  --red:#F2463D;     /* accent：系列名、編號、小提醒線、星冰樂的御守 */
-  --sub:#5A6380;     /* 次要文字（由 text 調淡） */
-  --silver:#C98A2E;  /* 清單符號（primary 加深） */
-  --line:#EBD7A8;
+  --bg:#FFFDF4;      /* background：米白底 */
+  --panel:#F2F1E9;   /* surface：一句話定義底塊 */
+  --ink:#292D3E;     /* text：深灰藍文字 */
+  --primary:#F6E58D; /* primary：研究小抄區塊 */
+  --red:#2447D8;     /* accent：系列名、編號、小提醒線（寶藍） */
+  --sub:#646A7E;     /* 次要文字（由 text 調淡） */
+  --silver:#B8A43A;  /* 清單符號（primary 加深） */
+  --line:#E6E3D3;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1350px}
@@ -23,7 +23,7 @@ h1{font-size:74px;font-weight:900;line-height:1.15;margin-top:20px;letter-spacin
 .en{font-size:23px;color:var(--sub);margin-top:8px;letter-spacing:.5px}
 
 /* ② 一句話定義 */
-.def{margin-top:32px;background:var(--panel);border-radius:6px;padding:28px 34px;
+.def{margin-top:32px;background:var(--panel);border-left:6px solid var(--red);border-radius:6px;padding:28px 34px;
   font-size:29px;line-height:1.6;font-weight:700}
 
 /* ③ 三個重點 */
@@ -32,16 +32,16 @@ h1{font-size:74px;font-weight:900;line-height:1.15;margin-top:20px;letter-spacin
 .num{flex:none;width:40px;font-size:22px;font-weight:900;color:var(--red);padding-top:5px;letter-spacing:1px}
 .num::before{content:"0"}
 .pt h3{font-size:29px;font-weight:900;margin-bottom:6px}
-.pt p{font-size:23px;line-height:1.6;color:#2E3A5C}
+.pt p{font-size:23px;line-height:1.6;color:#3A3F52}
 .cite{font-size:16px;font-weight:700;color:var(--sub);letter-spacing:.3px;white-space:nowrap}
 
 /* ④ 研究小抄＋星冰樂 */
 .bottom{margin-top:auto;display:flex;gap:40px;align-items:flex-end}
-.memo{flex:1;background:rgba(255,185,74,.30);border-top:4px solid var(--primary);border-radius:0 0 6px 6px;padding:18px 22px;align-self:flex-end}
+.memo{flex:1;background:var(--primary);border-top:4px solid var(--red);border-radius:0 0 6px 6px;padding:18px 22px;align-self:flex-end}
 .memo h4{font-size:18px;font-weight:900;letter-spacing:3px;margin-bottom:10px}
 .memo h4::before{content:"";display:inline-block;width:10px;height:10px;background:var(--red);margin-right:10px;vertical-align:2px}
 .memo ul{list-style:none}
-.memo li{font-size:21px;line-height:1.6;margin-bottom:6px;padding-left:18px;position:relative;color:#2E3A5C}
+.memo li{font-size:21px;line-height:1.6;margin-bottom:6px;padding-left:18px;position:relative;color:#3A3F52}
 .memo li::before{content:"—";position:absolute;left:0;color:var(--silver)}
 .cat{flex:none;width:300px;display:flex;flex-direction:column;align-items:flex-end}
 .bubble{font-size:21px;align-self:stretch;line-height:1.55;color:var(--ink);margin-bottom:14px;text-align:left;
